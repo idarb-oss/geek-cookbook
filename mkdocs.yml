@@ -1,1 +1,53 @@
-site_name: My Docs
+site_name: Geek Cookbook
+copyright: Copyright &copy; 2021 - 2021 Idar Bergli
+repo_name: idarb-oss/geek-cookbook
+repo_url: https://github.com/idarb-oss/geek-cookbook
+
+nav:
+  - Home: 'index.md'
+  - 'Docker Swarm':
+    - 'Design': 'docker-swarm/design.md'
+    - 'Hardware':
+      - 'Raspberry Pi': 'docker-swarm/pi.md'
+    - 'Preperation':
+      - 'Swarm Setup': 'docker-swarm/swarm-setup.md'
+      - 'Shared Storage Ceph': 'docker-swarm/ceph.md'
+      - 'Keepalived': 'docker-swarm/keepalived.md'
+  #- 'Kubernetes':
+  #  - 'Design': 'kubernetes/design.md'
+
+theme:
+  name: material
+  palette:
+    #scheme: slate
+    primary: teal
+    accent: 'deep orange'
+  font:
+    code: Roboto Mono
+  language: en
+  icon:
+    logo: fontawesome/solid/paragraph
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.sections
+    - header.autohide
+
+plugins:
+  - search:
+      prebuild_index: true
+  - git-revision-date:
+
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
