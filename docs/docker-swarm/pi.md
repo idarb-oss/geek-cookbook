@@ -89,8 +89,12 @@ The first part of the login will be resetting the default password so first writ
 First thing to do is update the OS by doing:
 
 ```sh
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 ```
+
+!!! note
+    If you get an error saying `Connection failed [IP: 2001:67c:1360:8001::24 80]` you have an issue by connection over IPv6 to force IPv4 add the following to the `apt-get` command `-o Acquire::ForceIPv4=true`. Example for update `sudo apt-get -o Acquire::ForceIPv4=true update`.
+    To make it simpler add this to the cli config file: `alias apt-get="sudo apt-get -o Acquire::ForceIPv4=true"`
 
 ### Set Hostname
 
