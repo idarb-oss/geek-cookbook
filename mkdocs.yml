@@ -14,7 +14,7 @@ nav:
     - 'Preperation':
       - 'Swarm Setup': 'docker-swarm/swarm-setup.md'
       - 'Shared Storage (NFS)': 'docker-swarm/nfs.md'
-      - 'Shared Storage (Ceph)': 'docker-swarm/ceph.md'
+      #- 'Shared Storage (Ceph)': 'docker-swarm/ceph.md'
       - 'Keepalived': 'docker-swarm/keepalived.md'
   #- 'Kubernetes':
   #  - 'Design': 'kubernetes/design.md'
