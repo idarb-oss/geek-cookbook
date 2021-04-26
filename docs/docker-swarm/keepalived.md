@@ -28,7 +28,7 @@ If we assume the following IP addresses:
 - 192.168.10.2 - Swarm 1
 - 192.168.10.3 - Swarm 2
 - 192.168.10.4 - Swarm 3
-- 192.168.10.5 - Virutal
+- 192.168.10.5 - Virtual
 
 **Run on Swarm 1**
 ```sh
