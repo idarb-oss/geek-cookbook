@@ -14,7 +14,7 @@
     
     
       
-        <title>Design - Geek Cookbook</title>
+        <title>Keepalived - Geek Cookbook</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#preperation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Design
+              Keepalived
             
           </span>
         </div>
@@ -163,6 +168,22 @@
       Home
     </a>
   </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cli/zsh/" class="md-tabs__link">
+        CLI
+      </a>
+    </li>
+  
 
       
         
@@ -248,6 +269,48 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CLI" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/zsh/" class="md-nav__link">
+        ZSH
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -255,14 +318,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      <label class="md-nav__link" for="__nav_2">
+      <label class="md-nav__link" for="__nav_3">
         Docker Swarm
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Docker Swarm" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Docker Swarm
         </label>
@@ -290,14 +353,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_3_2">
         Hardware
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Hardware" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Hardware
         </label>
@@ -333,14 +396,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
       
-      <label class="md-nav__link" for="__nav_2_3">
+      <label class="md-nav__link" for="__nav_3_3">
         Preperation
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Preperation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Preperation
         </label>
@@ -363,8 +426,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../ceph/" class="md-nav__link">
-        Shared Storage Ceph
+      <a href="../nfs/" class="md-nav__link">
+        Shared Storage (NFS)
       </a>
     </li>
   
@@ -403,6 +466,33 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
+        <li class="md-nav__item">
+  <a href="#preperation" class="md-nav__link">
+    Preperation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preperation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-swarm-nodes" class="md-nav__link">
+    Setup Swarm Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-it" class="md-nav__link">
+    Thats it!
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -430,6 +520,56 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preperation" class="md-nav__link">
+    Preperation
+  </a>
+  
+    <nav class="md-nav" aria-label="Preperation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-swarm-nodes" class="md-nav__link">
+    Setup Swarm Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-it" class="md-nav__link">
+    Thats it!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -442,7 +582,48 @@
                 
                   <h1>Keepalived</h1>
                 
-                
+                <p>Even tough having a swarm that is self healing and is great for the scalability and availability we need a ways for clients to easly connect to the cluster.</p>
+<p>To do this we would need to have a single IP to the world for external access. Docker Swarm aready provides the load-balancing capabilities (<a href="https://docs.docker.com/engine/swarm/ingress/">routing mesh</a>), all we need for seamless HA is a virtual IP which will be provided by more than one docker node.</p>
+<p>We will use <a href="https://www.keepalived.org/">Keepalived</a> on atleast two docker swarm nodes to do this.</p>
+<h2 id="preperation">Preperation</h2>
+<p>To be able to use the <em>Keepalived</em> to work we need to prepare the system for this, as it is dependent on a kernel module. The <em>ip_vs</em> module is needed so that services are alowed to bind to non-local interface addresses.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;modprobe ip_vs&quot;</span> <span class="p">|</span> sudo tee -a /etc/modules &gt; /dev/null
+modprobe ip_vs
+</code></pre></div>
+<h3 id="setup-swarm-nodes">Setup Swarm Nodes</h3>
+<p>If we assume the following IP addresses:</p>
+<ul>
+<li>192.168.10.2 - Swarm 1</li>
+<li>192.168.10.3 - Swarm 2</li>
+<li>192.168.10.4 - Swarm 3</li>
+<li>192.168.10.5 - Virtual</li>
+</ul>
+<p><strong>Run on Swarm 1</strong>
+<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
+  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">200</span> <span class="se">\</span>
+  osixia/keepalived:2.0.20
+</code></pre></div></p>
+<p><strong>Run on Swarm 2</strong>
+<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
+  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">100</span> <span class="se">\</span>
+  osixia/keepalived:2.0.20
+</code></pre></div></p>
+<p><strong>Run on Swarm 3</strong>
+<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
+  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
+  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">100</span> <span class="se">\</span>
+  osixia/keepalived:2.0.20
+</code></pre></div></p>
+<h2 id="thats-it">Thats it!</h2>
+<p>Now the swarm nodes will talk to each other by using unicast (no need to un-firewall multicast addresses), and the one with the highest priority will be the master of the IP. When traffic arrives thrue the Virtual IP the Docker Swarm service mesh will route the trafic to the correct node.</p>
                 
                   
                     
@@ -451,7 +632,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-22
+      Last update: 2021-04-27
     
   </small>
 </div>
@@ -474,7 +655,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../ceph/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../nfs/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -483,7 +664,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Shared Storage Ceph
+              Shared Storage (NFS)
             </div>
           </div>
         </a>

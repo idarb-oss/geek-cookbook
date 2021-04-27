@@ -173,6 +173,22 @@
         
   
   
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cli/zsh/" class="md-tabs__link">
+        CLI
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
 
@@ -253,6 +269,48 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        CLI
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CLI" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/zsh/" class="md-nav__link">
+        ZSH
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -260,14 +318,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      <label class="md-nav__link" for="__nav_2">
+      <label class="md-nav__link" for="__nav_3">
         Docker Swarm
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Docker Swarm" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Docker Swarm
         </label>
@@ -297,14 +355,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_3_2">
         Hardware
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Hardware" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Hardware
         </label>
@@ -410,6 +468,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    WiFi
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -434,14 +499,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
-      <label class="md-nav__link" for="__nav_2_3">
+      <label class="md-nav__link" for="__nav_3_3">
         Preperation
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Preperation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Preperation
         </label>
@@ -464,8 +529,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../ceph/" class="md-nav__link">
-        Shared Storage Ceph
+      <a href="../nfs/" class="md-nav__link">
+        Shared Storage (NFS)
       </a>
     </li>
   
@@ -585,6 +650,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    WiFi
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -669,8 +741,13 @@ Are you sure you want to <span class="k">continue</span> connecting <span class=
 </code></pre></div>
 <p>The first part of the login will be resetting the default password so first write <code>ubuntu</code> then your own new password to be used.</p>
 <p>First thing to do is update the OS by doing:</p>
-<div class="highlight"><pre><span></span><code>sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+<div class="highlight"><pre><span></span><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade -y
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you get an error saying <code>Connection failed [IP: 2001:67c:1360:8001::24 80]</code> you have an issue by connection over IPv6 to force IPv4 add the following to the <code>apt-get</code> command <code>-o Acquire::ForceIPv4=true</code>. Example for update <code>sudo apt-get -o Acquire::ForceIPv4=true update</code>.
+To make it simpler add this to the cli config file: <code>alias apt-get="sudo apt-get -o Acquire::ForceIPv4=true"</code></p>
+</div>
 <h3 id="set-hostname">Set Hostname</h3>
 <p>To be able to give names to the Pis we will use the <code>hostnamectl</code> so that we can more easly get the hold of the Pis on the nettwork.</p>
 <p>In this setup we will name the Pis with <code>swarm#</code> where the # represents a number. Here we will setup 3 nodes so we will have the name <code>swamr1</code>, <code>swarm2</code> and <code>swarm3</code>.</p>
@@ -680,6 +757,51 @@ Are you sure you want to <span class="k">continue</span> connecting <span class=
 <p>then reboot the nodes after the change by:</p>
 <div class="highlight"><pre><span></span><code>sudo reboot
 </code></pre></div>
+<h2 id="wifi">WiFi</h2>
+<p>On <code>ubuntu</code> we can activate the <em>wifi</em> configuration by using <a href="https://netplan.io/">netplan</a> to configure it up. Let's activate the wifi where we have some info allready given:</p>
+<ul>
+<li>SSID the name of the nettwork</li>
+<li>The password of the nettwork</li>
+<li>We want to use DHCP4 configured to get an IP address</li>
+</ul>
+<p>So netplan is an network configuration abstraction that uses yaml files for configuration. The files are located at <code>/etc/netplan/*.yaml</code> where we can generate new files as we need. Lets create a new yaml configuration for our wifi connection.</p>
+<p>Lets start by finding the name of our wifi by doing</p>
+<div class="highlight"><pre><span></span><code>iw dev
+</code></pre></div>
+<p>This will give an output similar to where we need the <code>wlan0</code> under <em>Interface</em>.</p>
+<div class="highlight"><pre><span></span><code>phy#0
+    Interface wlan0
+        ifindex 3
+        wdev 0x1
+        addr b8:27:eb:52:87:6a
+        type managed
+        channel 34 (5170 MHz), width: 20 MHz, center1: 5170 MHz
+</code></pre></div>
+<p>Before we start to configure with <em>netplan</em> lets make sure the wifi interface is up and running by doing:</p>
+<div class="highlight"><pre><span></span><code>sudo ip link <span class="nb">set</span> dev wlan0 up
+</code></pre></div>
+<p>Lets create a new yaml configuration for <em>netplan</em> by doing:</p>
+<div class="highlight"><pre><span></span><code>sudo nano /etc/netplan/01-wifi-config.yaml
+</code></pre></div>
+<p>And write the information like:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">network</span><span class="p">:</span>
+  <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="nt">wifis</span><span class="p">:</span>
+    <span class="nt">wlan0</span><span class="p">:</span>
+      <span class="nt">dhcp4</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+      <span class="nt">access-points</span><span class="p">:</span>
+        <span class="p p-Indicator">[</span><span class="nv">SSID</span><span class="p p-Indicator">]:</span>
+          <span class="nt">password</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">SSID-PASSWORD</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<p>and change out the [SSID] by the name of the nettwork and the [SSID-PASSWORD] with the password of the wifi nettwork.</p>
+<p>Then close save and close the nano editor by doing <code>ctrl+o</code> and <code>ctrl+x</code> and you would see the new file in the <em>netplan</em> folder.</p>
+<p>To activate the new configuration do:</p>
+<div class="highlight"><pre><span></span><code>sudo netplan generate
+sudo netplan apply
+</code></pre></div>
+<p>And if you want and can do a <code>sudo reboot</code>of the system. Now the system will connect to the wifi nettwork given. To check the IP address do the following:</p>
+<div class="highlight"><pre><span></span><code>ip address
+</code></pre></div>
                 
                   
                     
@@ -688,7 +810,7 @@ Are you sure you want to <span class="k">continue</span> connecting <span class=
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-22
+      Last update: 2021-04-27
     
   </small>
 </div>

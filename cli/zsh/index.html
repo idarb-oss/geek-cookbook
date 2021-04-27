@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
     
     
       
-        <title>Geek Cookbook</title>
+        <title>ZSH - Geek Cookbook</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6f955dcd.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
           
           
@@ -55,12 +55,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="deep-orange">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#installing-zsh" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -69,7 +74,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Geek Cookbook" class="md-header__button md-logo" aria-label="Geek Cookbook" data-md-component="logo">
+    <a href="../.." title="Geek Cookbook" class="md-header__button md-logo" aria-label="Geek Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 48v32a16 16 0 0 1-16 16h-48v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V96h-32v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V352h-32a160 160 0 0 1 0-320h240a16 16 0 0 1 16 16z"/></svg>
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              ZSH
             
           </span>
         </div>
@@ -159,7 +164,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -168,13 +173,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/cli/zsh/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         CLI
       </a>
     </li>
@@ -190,7 +197,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/docker-swarm/design/" class="md-tabs__link">
+      <a href="../../docker-swarm/design/" class="md-tabs__link">
         Docker Swarm
       </a>
     </li>
@@ -217,7 +224,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Geek Cookbook" class="md-nav__button md-logo" aria-label="Geek Cookbook" data-md-component="logo">
+    <a href="../.." title="Geek Cookbook" class="md-nav__button md-logo" aria-label="Geek Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 48v32a16 16 0 0 1-16 16h-48v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V96h-32v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V352h-32a160 160 0 0 1 0-320h240a16 16 0 0 1 16 16z"/></svg>
@@ -249,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -262,12 +269,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         CLI
@@ -283,11 +292,67 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/cli/zsh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ZSH
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ZSH
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-zsh" class="md-nav__link">
+    Installing ZSH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    OH-MY-ZSH
+  </a>
+  
+    <nav class="md-nav" aria-label="OH-MY-ZSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure" class="md-nav__link">
+    Configure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -327,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker-swarm/design/" class="md-nav__link">
+      <a href="../../docker-swarm/design/" class="md-nav__link">
         Design
       </a>
     </li>
@@ -362,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker-swarm/pi/" class="md-nav__link">
+      <a href="../../docker-swarm/pi/" class="md-nav__link">
         Raspberry Pi
       </a>
     </li>
@@ -403,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker-swarm/swarm-setup/" class="md-nav__link">
+      <a href="../../docker-swarm/swarm-setup/" class="md-nav__link">
         Swarm Setup
       </a>
     </li>
@@ -415,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker-swarm/nfs/" class="md-nav__link">
+      <a href="../../docker-swarm/nfs/" class="md-nav__link">
         Shared Storage (NFS)
       </a>
     </li>
@@ -427,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker-swarm/keepalived/" class="md-nav__link">
+      <a href="../../docker-swarm/keepalived/" class="md-nav__link">
         Keepalived
       </a>
     </li>
@@ -453,11 +518,121 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-zsh" class="md-nav__link">
+    Installing ZSH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oh-my-zsh" class="md-nav__link">
+    OH-MY-ZSH
+  </a>
+  
+    <nav class="md-nav" aria-label="OH-MY-ZSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure" class="md-nav__link">
+    Configure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/idarb-oss/geek-cookbook/edit/master/docs/cli/zsh.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>ZSH</h1>
+                
+                <p>So this is all about installing and configuring <em>ZSH</em> on <em>Ubuntu 20.04 LTS</em>. But can be used for all ubuntu based installations. We will be using <em>OH-MY-ZSH</em> as well so lets get going.</p>
+<h2 id="installing-zsh">Installing ZSH</h2>
+<p>So lets install the <em>ZSH</em> on the system:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install zsh
+</code></pre></div>
+<p>This will install the latest available <em>ZSH</em> from the package manager. Lets check that it is available:</p>
+<div class="highlight"><pre><span></span><code>zsh --version
+
+zsh <span class="m">5</span>.8 <span class="o">(</span>aarch64-unknown-linux-gnu<span class="o">)</span>
+</code></pre></div>
+<p>So now lets configure so that ZSH will be the default shell for the system:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="nv">$SHELL</span>
+chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
+</code></pre></div>
+<p>Now we its is set as default and to test that logout and in again and see the change.</p>
+<h2 id="oh-my-zsh">OH-MY-ZSH</h2>
+<p>Lets get some basic tools if they are not all ready installed on to the system:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install curl wget git
+</code></pre></div>
+<p>Then lets install with one of the following commands:</p>
+<div class="highlight"><pre><span></span><code>sh -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>sh -c <span class="s2">&quot;</span><span class="k">$(</span>wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+<h3 id="configure">Configure</h3>
+<p>When installing the <em>OH-MY-ZSH</em> a new <code>.zshrc</code> file will be generated where you can configure youre commandline.</p>
+<p>Example we add more plugins find the line in <code>.zshrc</code> file:</p>
+<div class="highlight"><pre><span></span><code>nano .zshrc
+</code></pre></div>
+<p>Find the line that says <code>plugins=(git)</code> and change it to <code>plugins=(git zsh-autosuggestions zsh-syntax-highlighting)</code></p>
+<p>then we  need to add those plugsin to <em>OH-My-ZSH</em>:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/zsh-users/zsh-autosuggestions.git <span class="nv">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="nv">$ZSH_CUSTOM</span>/plugins/zsh-syntax-highlighting
+</code></pre></div>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-04-27
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
 
               
             </article>
@@ -468,6 +643,39 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../.." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../docker-swarm/design/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Design
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -492,10 +700,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "/assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>
