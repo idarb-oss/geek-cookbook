@@ -89,8 +89,12 @@ The first part of the login will be resetting the default password so first writ
 First thing to do is update the OS by doing:
 
 ```sh
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 ```
+
+!!! note
+    If you get an error saying `Connection failed [IP: 2001:67c:1360:8001::24 80]` you have an issue by connection over IPv6 to force IPv4 add the following to the `apt-get` command `-o Acquire::ForceIPv4=true`. Example for update `sudo apt-get -o Acquire::ForceIPv4=true update`.
+    To make it simpler add this to the cli config file: `alias apt-get="sudo apt-get -o Acquire::ForceIPv4=true"`
 
 ### Set Hostname
 
@@ -108,4 +112,74 @@ then reboot the nodes after the change by:
 
 ```
 sudo reboot
+```
+
+## WiFi
+
+On `ubuntu` we can activate the _wifi_ configuration by using [netplan](https://netplan.io/) to configure it up. Let's activate the wifi where we have some info allready given:
+
+- SSID the name of the nettwork
+- The password of the nettwork
+- We want to use DHCP4 configured to get an IP address
+
+So netplan is an network configuration abstraction that uses yaml files for configuration. The files are located at `/etc/netplan/*.yaml` where we can generate new files as we need. Lets create a new yaml configuration for our wifi connection.
+
+Lets start by finding the name of our wifi by doing
+
+```sh
+iw dev
+```
+
+This will give an output similar to where we need the `wlan0` under _Interface_.
+
+```
+phy#0
+	Interface wlan0
+		ifindex 3
+		wdev 0x1
+		addr b8:27:eb:52:87:6a
+		type managed
+		channel 34 (5170 MHz), width: 20 MHz, center1: 5170 MHz
+```
+
+Before we start to configure with _netplan_ lets make sure the wifi interface is up and running by doing:
+
+```sh
+sudo ip link set dev wlan0 up
+```
+
+Lets create a new yaml configuration for _netplan_ by doing:
+
+```sh
+sudo nano /etc/netplan/01-wifi-config.yaml
+```
+
+And write the information like:
+
+```yaml
+network:
+  version: 2
+  wifis:
+    wlan0:
+      dhcp4: yes
+      access-points:
+        [SSID]:
+          password: [SSID-PASSWORD]
+```
+
+and change out the [SSID] by the name of the nettwork and the [SSID-PASSWORD] with the password of the wifi nettwork.
+
+Then close save and close the nano editor by doing `ctrl+o` and `ctrl+x` and you would see the new file in the _netplan_ folder.
+
+To activate the new configuration do:
+
+```sh
+sudo netplan generate
+sudo netplan apply
+```
+
+And if you want and can do a `sudo reboot`of the system. Now the system will connect to the wifi nettwork given. To check the IP address do the following:
+
+```sh
+ip address
 ```
