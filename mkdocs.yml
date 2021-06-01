@@ -5,8 +5,9 @@ repo_url: https://github.com/idarb-oss/geek-cookbook
 
 nav:
   - Home: 'index.md'
-  - CLI:
-    - ZSH: 'cli/zsh.md'
+  - 'Development Setup':
+    - ZSH: 'dev/zsh.md'
+    - Docker: 'dev/docker.md'
   - 'Docker Swarm':
     - 'Design': 'docker-swarm/design.md'
     - 'Hardware':
