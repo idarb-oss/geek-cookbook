@@ -14,7 +14,7 @@
     
     
       
-        <title>Keepalived - Geek Cookbook</title>
+        <title>Docker - Geek Cookbook</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preperation" class="md-skip">
+        <a href="#setup-repository" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Keepalived
+              Docker
             
           </span>
         </div>
@@ -173,13 +173,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../dev/zsh/" class="md-tabs__link">
+      <a href="../zsh/" class="md-tabs__link md-tabs__link--active">
         Development Setup
       </a>
     </li>
@@ -189,15 +191,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../design/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../docker-swarm/design/" class="md-tabs__link">
         Docker Swarm
       </a>
     </li>
@@ -269,12 +269,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Development Setup
@@ -292,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev/zsh/" class="md-nav__link">
+      <a href="../zsh/" class="md-nav__link">
         ZSH
       </a>
     </li>
@@ -302,11 +304,54 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../dev/docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Docker
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-repository" class="md-nav__link">
+    Setup repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -323,14 +368,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
         Docker Swarm
@@ -348,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design/" class="md-nav__link">
+      <a href="../../docker-swarm/design/" class="md-nav__link">
         Design
       </a>
     </li>
@@ -383,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pi/" class="md-nav__link">
+      <a href="../../docker-swarm/pi/" class="md-nav__link">
         Raspberry Pi
       </a>
     </li>
@@ -399,16 +442,14 @@
             
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       <label class="md-nav__link" for="__nav_3_3">
         Preperation
@@ -426,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swarm-setup/" class="md-nav__link">
+      <a href="../../docker-swarm/swarm-setup/" class="md-nav__link">
         Swarm Setup
       </a>
     </li>
@@ -438,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nfs/" class="md-nav__link">
+      <a href="../../docker-swarm/nfs/" class="md-nav__link">
         Shared Storage (NFS)
       </a>
     </li>
@@ -448,67 +489,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Keepalived
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docker-swarm/keepalived/" class="md-nav__link">
         Keepalived
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preperation" class="md-nav__link">
-    Preperation
-  </a>
-  
-    <nav class="md-nav" aria-label="Preperation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-swarm-nodes" class="md-nav__link">
-    Setup Swarm Nodes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#thats-it" class="md-nav__link">
-    Thats it!
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -549,28 +534,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preperation" class="md-nav__link">
-    Preperation
+  <a href="#setup-repository" class="md-nav__link">
+    Setup repository
   </a>
-  
-    <nav class="md-nav" aria-label="Preperation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-swarm-nodes" class="md-nav__link">
-    Setup Swarm Nodes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#thats-it" class="md-nav__link">
-    Thats it!
+  <a href="#install-docker" class="md-nav__link">
+    Install Docker
   </a>
   
 </li>
@@ -587,55 +559,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/idarb-oss/geek-cookbook/edit/master/docs/docker-swarm/keepalived.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/idarb-oss/geek-cookbook/edit/master/docs/dev/docker.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Keepalived</h1>
+                  <h1>Docker</h1>
                 
-                <p>Even tough having a swarm that is self healing and is great for the scalability and availability we need a ways for clients to easly connect to the cluster.</p>
-<p>To do this we would need to have a single IP to the world for external access. Docker Swarm aready provides the load-balancing capabilities (<a href="https://docs.docker.com/engine/swarm/ingress/">routing mesh</a>), all we need for seamless HA is a virtual IP which will be provided by more than one docker node.</p>
-<p>We will use <a href="https://www.keepalived.org/">Keepalived</a> on atleast two docker swarm nodes to do this.</p>
-<h2 id="preperation">Preperation</h2>
-<p>To be able to use the <em>Keepalived</em> to work we need to prepare the system for this, as it is dependent on a kernel module. The <em>ip_vs</em> module is needed so that services are alowed to bind to non-local interface addresses.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;modprobe ip_vs&quot;</span> <span class="p">|</span> sudo tee -a /etc/modules &gt; /dev/null
-modprobe ip_vs
+                <p>Setup of docker can be found at their docmentation found <a href="https://docs.docker.com/engine/install/ubuntu/">here</a> but we will short it down here to the commands needed.</p>
+<h2 id="setup-repository">Setup repository</h2>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 </code></pre></div>
-<h3 id="setup-swarm-nodes">Setup Swarm Nodes</h3>
-<p>If we assume the following IP addresses:</p>
-<ul>
-<li>192.168.10.2 - Swarm 1</li>
-<li>192.168.10.3 - Swarm 2</li>
-<li>192.168.10.4 - Swarm 3</li>
-<li>192.168.10.5 - Virtual</li>
-</ul>
-<p><strong>Run on Swarm 1</strong>
-<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
-  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">200</span> <span class="se">\</span>
-  osixia/keepalived:2.0.20
-</code></pre></div></p>
-<p><strong>Run on Swarm 2</strong>
-<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
-  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">100</span> <span class="se">\</span>
-  osixia/keepalived:2.0.20
-</code></pre></div></p>
-<p><strong>Run on Swarm 3</strong>
-<div class="highlight"><pre><span></span><code>docker run -d --name keepalived --restart<span class="o">=</span>always <span class="se">\</span>
-  --cap-add<span class="o">=</span>NET_ADMIN --cap-add<span class="o">=</span>NET_BROADCAST --cap-add<span class="o">=</span>NET_RAW --net<span class="o">=</span>host <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_UNICAST_PEERS</span><span class="o">=</span><span class="s2">&quot;#PYTHON2BASH:[&#39;192.168.10.2&#39;, &#39;192.168.10.3&#39;, &#39;192.168.10.4&#39;]&quot;</span> <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_VIRTUAL_IPS</span><span class="o">=</span><span class="m">192</span>.168.10.5 <span class="se">\</span>
-  -e <span class="nv">KEEPALIVED_PRIORITY</span><span class="o">=</span><span class="m">100</span> <span class="se">\</span>
-  osixia/keepalived:2.0.20
-</code></pre></div></p>
-<h2 id="thats-it">Thats it!</h2>
-<p>Now the swarm nodes will talk to each other by using unicast (no need to un-firewall multicast addresses), and the one with the highest priority will be the master of the IP. When traffic arrives thrue the Virtual IP the Docker Swarm service mesh will route the trafic to the correct node.</p>
+<h2 id="install-docker">Install Docker</h2>
+<div class="highlight"><pre><span></span><code>echo &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+</code></pre></div>
                 
                   
                     
@@ -667,7 +609,7 @@ modprobe ip_vs
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../nfs/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../zsh/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -676,11 +618,25 @@ modprobe ip_vs
               <span class="md-footer__direction">
                 Previous
               </span>
-              Shared Storage (NFS)
+              ZSH
             </div>
           </div>
         </a>
       
+      
+        <a href="../../docker-swarm/design/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Design
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

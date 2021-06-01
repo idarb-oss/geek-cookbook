@@ -179,8 +179,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../cli/zsh/" class="md-tabs__link">
-        CLI
+      <a href="../../dev/zsh/" class="md-tabs__link">
+        Development Setup
       </a>
     </li>
   
@@ -277,13 +277,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
-        CLI
+        Development Setup
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="CLI" data-md-level="1">
+      <nav class="md-nav" aria-label="Development Setup" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          CLI
+          Development Setup
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -292,8 +292,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli/zsh/" class="md-nav__link">
+      <a href="../../dev/zsh/" class="md-nav__link">
         ZSH
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/docker/" class="md-nav__link">
+        Docker
       </a>
     </li>
   
@@ -711,19 +723,13 @@
 <ul>
 <li>Press <code>CHOOSE OS</code></li>
 </ul>
-<p><img alt="pi-imager" src="pi-imager.png" /></p>
+<p><img alt="pi-imager" src="../../img/pi_imager.png" /></p>
 <ul>
-<li>Scroll down and find <code>Ubuntu</code></li>
-</ul>
-<p><img alt="pi-image-os" src="pi-os.png" /></p>
-<ul>
-<li>You then see a list of the diffrent ubuntu os that can be installed. We will select <code>Ubuntu 20.04.2 LTS (RPI 3/4/400)</code> we need to use 64bit since its the only OS Microk8s is available for.</li>
-</ul>
-<p><img alt="pi-os-selected" src="pi-os-selected.png" /></p>
-<ul>
+<li>Scroll down and find <code>Other general purpose OS</code> then select <code>Ubuntu</code>.</li>
+<li>You then see a list of the diffrent ubuntu OS images that can be installed. We will select <code>Ubuntu 20.04.2 LTS (RPI 3/4/400)</code> and we uses 64bit.</li>
 <li>Select the SD card to write to by pressing <code>CHOOSE SD CARD</code> and press <code>WRITE</code> then wait until its done.</li>
 </ul>
-<p><img alt="pi-os-write" src="pi-os-write.png" /></p>
+<p><img alt="pi-os-write" src="../../img/pi_write.png" /></p>
 <h2 id="boot-up">Boot Up</h2>
 <p>With the new writen SD card put it into the Pi and plug in the ethernet cable and connect it to the power. Wait for a while and we will need to find the IP address to the newly started Pi. For this we will use <a href="https://nmap.org/"><code>nmap</code></a> to search for the devices on the nettwork. Pi 3 starts with <code>B8:27:EB</code> as the MAC address while the Pi 4 uses <code>dc:a6:32</code>.</p>
 <div class="highlight"><pre><span></span><code>$ sudo nmap -sP <span class="m">192</span>.168.10.0/24
@@ -810,7 +816,7 @@ sudo netplan apply
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-27
+      Last update: 2021-06-01
     
   </small>
 </div>
