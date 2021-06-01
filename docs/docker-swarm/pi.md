@@ -48,19 +48,13 @@ Once you have done this start the program and select the OS where we will pick U
 
 - Press `CHOOSE OS`
 
-![pi-imager](pi-imager.png)
+![pi-imager](../img/pi_imager.png)
 
-- Scroll down and find `Ubuntu`
-
-![pi-image-os](pi-os.png)
-
-- You then see a list of the diffrent ubuntu os that can be installed. We will select `Ubuntu 20.04.2 LTS (RPI 3/4/400)` we need to use 64bit since its the only OS Microk8s is available for.
-
-![pi-os-selected](pi-os-selected.png)
-
+- Scroll down and find `Other general purpose OS` then select `Ubuntu`.
+- You then see a list of the diffrent ubuntu OS images that can be installed. We will select `Ubuntu 20.04.2 LTS (RPI 3/4/400)` and we uses 64bit.
 - Select the SD card to write to by pressing `CHOOSE SD CARD` and press `WRITE` then wait until its done.
 
-![pi-os-write](pi-os-write.png)
+![pi-os-write](../img/pi_write.png)
 
 ## Boot Up
 
